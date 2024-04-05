@@ -1,0 +1,33 @@
+﻿@model StudentManagement.Models.Student
+
+@{
+    ViewData["Title"] = "New Student";
+}
+
+<h2>New Student</h2>
+
+<form method="post"  asp-action="NewStudent">
+ 
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FirstMidName"></label>
+        <input asp-for="FirstMidName" class="form-control" />
+        <span asp-validation-for="FirstMidName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EnrollmentDate"></label>
+        <input asp-for="EnrollmentDate" class="form-control" />
+        <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
